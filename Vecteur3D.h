@@ -7,6 +7,8 @@
 
 #include <algorithm>
 #include <iterator>
+#include <iostream>
+
 template<class T>
 class Vecteur3d {
 public:
@@ -14,6 +16,7 @@ public:
     int get(int i) const;
     bool operator==(const Vecteur3d& v) const;
     Vecteur3d& operator*(int i) const;
+    void afficher() const;
 private:
     int x, y, z;
 };
@@ -37,6 +40,11 @@ template<class T>
 Vecteur3d<T> &Vecteur3d<T>::operator*(int i) const {
     Vecteur3d<T> v(x*i,y*i,z*i);
     return v;
+}
+
+template<class T>
+void Vecteur3d<T>::afficher() const {
+ std::cout << x << " " << y << " " << z << " " << std::endl;
 }
 
 
