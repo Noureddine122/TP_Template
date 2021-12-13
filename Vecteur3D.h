@@ -13,7 +13,7 @@ template<class T>
 class Vecteur3d {
 public:
     explicit Vecteur3d(int x=0, int y=0, int z=0);
-    int get(int i) const;
+
     bool operator==(const Vecteur3d& v) const;
     Vecteur3d& operator*(int i) const;
     void afficher() const;
@@ -24,11 +24,6 @@ private:
 template<class T>
 Vecteur3d<T>::Vecteur3d(int x, int y, int z):x(x), y(y), z(z){
 
-}
-
-template<class T>
-int Vecteur3d<T>::get(int i) const {
-    return 0;
 }
 
 template<class T>
